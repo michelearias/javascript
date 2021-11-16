@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] // colocar a tag que quero selecionar, [0] indica que quero selecionar o primeiro paragrafo
+        var corpo = window.document.body
+        
+        window.document.write('Olá, mundo! <br>') // posso procurar configurações do site. Ex window.document.write(window.document.URL) 
+        window.document.write('Está escrito assim: ' + p1.innerText) // p1.innerTexr indica que vou mostrar o texto do p1
+        p1.style.color = 'blue' // mudar o paragrafo para azul
+        
+        // window.document.write(p1.innerHTML) - MOSTRA O PARAGRAFO (P) COM AS FORMATAÇÕES, ENQUANTO QUE O p1.innerText mostra apenas o texto seme formatações
+
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = ' green'
+        d.innerText = 'Estou aguardando...'
+        */
+
+        /*
+        var d = window.document.getElementsByName('msg'[0]
+        d.innerText = 'Olá'
+        */
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+
+
+
+         
+
+    </script>
+    
+</body>
+</html>
